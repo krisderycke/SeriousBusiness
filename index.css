@@ -14,6 +14,12 @@ body {
   text-decoration: underline;
 }
 
+#currentTime {
+  background-color: red;
+  text-align: center;
+  height: 50px;
+}
+
 .table {
   height: 50vh;
   width: 45vw;
