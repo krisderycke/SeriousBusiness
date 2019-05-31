@@ -12,9 +12,19 @@ function myTime() {
   var n = weekday[d.getDay()];
   console.log(n);
 
-  if () {
-    console.log("closed");
+  var clock = new Date();
+  var h = clock.getHours();
+  var m = clock.getMinutes();
+  if (h < 10) {
+    h = "0" + h;
+  }
+  if (h == 24) {
+    h = "00";
+  }
+  if (m < 10) {
+    m = "0" + m;
   }
 
-  document.getElementById("currentTime").innerHTML = n;
+  document.getElementById("currentTime").innerText = n + " " + h + ":" + m;
+  setTimeout("myTime()", 60000);
 }

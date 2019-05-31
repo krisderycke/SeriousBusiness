@@ -15,9 +15,9 @@ body {
 }
 
 #currentTime {
-  background-color: red;
   text-align: center;
   height: 50px;
+  font-weight: 900;
 }
 
 .table {
