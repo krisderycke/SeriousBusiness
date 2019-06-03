@@ -1,3 +1,9 @@
+var clock = new Date();
+var h = clock.getHours();
+var m = clock.getMinutes();
+var w = clock.getDay();
+console.log(w);
+
 function myTime() {
   var d = new Date();
   var weekday = Array(7);
@@ -12,9 +18,6 @@ function myTime() {
   var n = weekday[d.getDay()];
   console.log(n);
 
-  var clock = new Date();
-  var h = clock.getHours();
-  var m = clock.getMinutes();
   if (h < 10) {
     h = "0" + h;
   }
@@ -25,6 +28,22 @@ function myTime() {
     m = "0" + m;
   }
 
-  document.getElementById("currentTime").innerText = n + " " + h + ":" + m;
-  setTimeout("myTime()", 60000);
+  var a = document.getElementById("currentTime");
+  a.innerText = n + " // " + h + ":" + m;
+  a.style.color = "#440115";
+
+  setTimeout("myTime()", 30000);
+}
+
+var today = document.getElementsByClassName("day");
+console.log(today);
+var changeDay = today[w - 1];
+console.log(changeDay);
+
+document.getElementsByClassName("querry").innerHTML = "Closed";
+if (h > 7 && h < 15) {
+  changeDay.children[2].innerText = "Open";
+  // document.getElementsByClassName("querry").style.backgroundColor = "green";
+} else {
+  changeDay.children[2].innerText = "Closed";
 }
