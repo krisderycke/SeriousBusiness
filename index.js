@@ -40,10 +40,9 @@ console.log(today);
 var changeDay = today[w - 1];
 console.log(changeDay);
 
-document.getElementsByClassName("querry").innerHTML = "Closed";
+document.getElementsByClassName("check").innerHTML = "Closed";
 if (h > 7 && h < 15) {
   changeDay.children[2].innerText = "Open";
-  // document.getElementsByClassName("querry").style.backgroundColor = "green";
 } else {
   changeDay.children[2].innerText = "Closed";
 }
