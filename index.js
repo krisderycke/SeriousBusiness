@@ -40,9 +40,9 @@ console.log(today);
 var changeDay = today[w - 1];
 console.log(changeDay);
 
-document.getElementsByClassName("check").innerHTML = "Closed";
-if (h > 7 && h < 15) {
-  changeDay.children[2].innerText = "Open";
+document.getElementsByClassName("check");
+if (h > 7 && h < 17) {
+  changeDay.children[2].innerHTML = "Open";
 } else {
-  changeDay.children[2].innerText = "Closed";
+  changeDay.children[2].innerHTML = "Closed";
 }
