@@ -31,18 +31,19 @@ function myTime() {
   var a = document.getElementById("currentTime");
   a.innerText = n + " // " + h + ":" + m;
   a.style.color = "#440115";
-
-  setTimeout("myTime()", 30000);
 }
+setTimeout("myTime()", 30000);
 
-var today = document.getElementsByClassName("day");
-console.log(today);
-var changeDay = today[w - 1];
-console.log(changeDay);
+// var today = document.getElementsByClassName("day");
+// console.log(today);
+// var changeDay = today[w - 1];
+// console.log(changeDay);
 
-document.getElementsByClassName("check");
+var check = document.getElementById("check");
 if (h > 7 && h < 17) {
-  changeDay.children[2].innerHTML = "Open";
+  check.innerHTML = "We're Open";
+  check.style.color = "green";
 } else {
-  changeDay.children[2].innerHTML = "Closed";
+  check.innerHTML = "Sorry, we're Closed";
+  check.style.color = "red";
 }
